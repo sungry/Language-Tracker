@@ -3,3 +3,8 @@ body {
 	background-color: skyblue;
   padding-top: 50px;
 }
+
+.content {
+  width: 800px;
+  margin: auto;
+}

@@ -24,7 +24,7 @@
           <li class="active"><a href="#">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#about">View</a></li>
-          <li><a href="#about">Edit</a></li>
+          <li><a href="#about" class="edit">Edit</a></li>
           <li><a href="#contact">Logout</a></li>
         </ul>
       </div><!--/.nav-collapse -->
@@ -41,18 +41,23 @@
     };
   </script>
 
+  <script src="js/jquery-1.11.1.js"></script>
+  <script src="js/underscore.js"></script>
+  <script src="js/backbone.js"></script>
+  <script src="../app/models/EditModel.js"></script>
+  <script src="../app/views/EditView.js"></script>
+  <script src="../db/db.js"></script>
   <script>
   $(document).ready(function(){
-    $('.content').on('click', function(){
+    $('.edit').on('click', function(){
+      // Fix active class toggle
+      $('ul li').find('.active').removeClass('active');
+      $(this).addClass('active');
       new EditView();
     });
   });
   </script>
 
-	<script src="js/jquery-1.11.1.js"></script>
-	<script src="js/underscore.js"></script>
-  <script src="js/backbone.js"></script>
-	<script src="js/app.js"></script>
 </body>
 </html>
 
