@@ -9,7 +9,7 @@ Language-Tracker offers a place to store information and document progress in la
   3. Set reminders
   4. Add notes, questions, and topics to research
   5. Suggestions for fun, motivational activities
-  6. Support and help maintin daily learning
+  6. Support for creating daily learning habits
 
 
 # Problem #
