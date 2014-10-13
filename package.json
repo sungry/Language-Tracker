@@ -1,1 +1,11 @@
-package.json
+{
+  "name": "Language-Tracker",
+  "version": "0.0.1",
+  "description": "Track your language progress",
+  "main": "server.js",
+  "private": true,
+  "dependencies": {
+  },
+  "devDependencies": {
+  }
+}
