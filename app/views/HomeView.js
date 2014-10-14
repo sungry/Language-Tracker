@@ -7,13 +7,14 @@ var HomeView = Backbone.View.extend({
   },
 
   render: function(){
-    var $welcome = $('<h1>Welcome!</h1>' +
+    var $welcome = $('<h1>Welcome, Language Enthusiast!</h1>' +
+      '<br>' +
       '<h2>Click Edit to save notes or View to see them.</h3>' +
       '<br>' +
       '<h4>Language Tracker allows you to document your progress ' +
-      'while learning a language. This site is under construction,' +
-      ' so stay tuned for additional features!</h4>' +
-      '<br>' +
+      'while learning a language and keep you motivated along the ' +
+      'way! This site is under construction,' +
+      ' so stay tuned for additional features.</h4>' +
       '<br>' +
       '<h2>Features to come:</h2>' +
       '<ul>' +

@@ -27,7 +27,7 @@
           <li><a href="#edit" class="edit">Edit</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <li><a>Daily Streak: 14</a></li>
+          <li><a>Daily Streak: <span class="badge">14</span></a></li>
           <li><a href="#signup" class="signup">Signup</a></li>
           <li class="logout"><a href="#logout">Logout</a></li>
         </ul>
@@ -44,7 +44,7 @@
 
   <!-- TO DO: Move to template file -->
   <script type="text/template" id="edit">
-    <h4>Select note type: </h4>
+    <h2>Select note type: </h2>
     <select class="noteType">
       <option value="Question">Question</option>
       <option value="Sentence">Sentence</option>
@@ -53,8 +53,9 @@
       <option value="Note">Note</option>
     </select>
 
-    <h4>Enter text: </h4>
+    <h2>Enter text: </h2>
     <textarea rows="10" cols="50" placeholder="早報就喺嗰張枱下面"></textarea>
+    <br>
     <br>
     <button>Save</button>
   </script>
@@ -116,7 +117,6 @@
     $('.content').on('blur', 'textarea', function(){
       $(this).attr('placeholder', '早報就喺嗰張枱下面');
     });
-
   });
   </script>
 

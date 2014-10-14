@@ -8,10 +8,14 @@ body {
 }
 
 .content {
-  width: 800px;
+  width: 650px;
   margin: auto;
 }
 
 textarea {
   resize: none;
+}
+
+li {
+  font-size: 16px;
 }
