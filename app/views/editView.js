@@ -20,7 +20,6 @@ var EditView = Backbone.View.extend({
     // Only save data if text was entered
     if (input.length) {
       this.collection.add({type: type, body: input});
-      console.log(this.collection, 'thiscollection');
     }
   },
 
