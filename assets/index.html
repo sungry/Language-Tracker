@@ -38,13 +38,6 @@
     </div>
   </div>
 
-  <script>
-    // Convenient console logging function
-    window.p = function(x){
-      console.log(x);
-    };
-  </script>
-
   <script type="text/template" id="edit">
     <h4>Select type: </h4>
     <select class="noteType">
@@ -69,11 +62,13 @@
   <script src="lib/underscore.js"></script>
   <script src="lib/backbone.js"></script>
 
-
-  <script src="../app/models/EditModel.js"></script>
+  <script src="../db/db.js"></script>
+  <script src="../app/models/NotesModel.js"></script>
+  <script src="../app/collections/NotesCollection.js"></script>
+  <script src="../app/views/NotesModelView.js"></script>
+  <script src="../app/views/NotesCollectionView.js"></script>
   <script src="../app/views/EditView.js"></script>
   <script src="../app/views/ViewView.js"></script>
-  <script src="../db/db.js"></script>
   
 
   <script>
