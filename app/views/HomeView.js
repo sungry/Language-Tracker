@@ -7,7 +7,27 @@ var HomeView = Backbone.View.extend({
   },
 
   render: function(){
-    var $welcome = $('<h1>Welcome!</h1><p>Click Edit to save notes and View to see them.</p>');
+    var $welcome = $('<h1>Welcome!</h1>' +
+      '<h2>Click Edit to save notes or View to see them.</h3>' +
+      '<br>' +
+      '<h4>Language Tracker allows you to document your progress ' +
+      'while learning a language. This site is under construction,' +
+      ' so stay tuned for additional features!</h4>' +
+      '<br>' +
+      '<br>' +
+      '<h2>Features to come:</h2>' +
+      '<ul>' +
+        '<li>View notes by day</li>' +
+        '<li>Organize notes</li>' +
+        '<li>Track studying by: </li>' +
+          '<ul>' +
+            '<li>Reading</li>' +
+            '<li>Writing</li>' +
+            '<li>Listening</li>' +
+            '<li>Speaking</li>' +
+          '</ul>' +
+      '</ul>'
+    );
     this.$el.append($welcome);
   }
 });
