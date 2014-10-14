@@ -7,7 +7,7 @@ var NotesModelView = Backbone.View.extend({
     this.render();
   },
 
-  template: _.template('<h3>Type: <%= type %><h3><br><p><%= body %></p>'),
+  template: _.template('<h3><%= type %>:<h3><p><%= body %></p><br>'),
 
   render: function(){
     this.$el.append(this.template(this.model.attributes));

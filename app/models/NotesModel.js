@@ -1,6 +1,6 @@
 var NotesModel = Backbone.Model.extend({
   defaults: {
-    type: 'default',
-    body: 'default body'
+    type: 'Note',
+    body: 'No content'
   }
 });
