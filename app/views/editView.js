@@ -6,6 +6,21 @@ var EditView = Backbone.View.extend({
     this.render();
   },
 
+  events: {
+    'click button': 'save'
+  },
+
+  save: function(){
+    var type = $('.noteType option:selected').val();
+    var input = $('textarea').val();
+    // Reset text field
+    $('textarea').val('');
+    // Only save data if text was entered
+    if (input.length) {
+      db[type].push(input);
+    }
+  },
+
   template: _.template( $("#edit").html(), {} ),
 
   render: function() {
