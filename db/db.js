@@ -1,1 +1,5 @@
-db.js
+// Store notes
+
+var notes = {
+
+};

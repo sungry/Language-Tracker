@@ -4,6 +4,10 @@ body {
   padding-top: 50px;
 }
 
+.main {
+  margin-top: 50px;
+}
+
 .content {
   width: 800px;
   margin: auto;

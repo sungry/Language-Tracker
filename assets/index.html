@@ -31,22 +31,41 @@
     </div>
   </div>
 
-  <div class="content">
-    
+  <!-- Main Content Area -->
+  <div class="main">
+    <div class="content">
+      
+    </div>
   </div>
 
   <script>
+    // Convenient console logging function
     window.p = function(x){
       console.log(x);
     };
   </script>
 
-  <script src="js/jquery-1.11.1.js"></script>
-  <script src="js/underscore.js"></script>
-  <script src="js/backbone.js"></script>
+  <script type="text/template" id="edit">
+      <h4>Select type: <h4>
+      <select>
+        <option value="question">Question</option>
+        <option value="sentence">Sentence</option>
+        <option value="grammar">Grammar</option>
+        <option value="research">Research</option>
+        <option value="note">Note</option>
+      </select>
+  </script>
+
+  <script src="lib/jquery-1.11.1.js"></script>
+  <script src="lib/underscore.js"></script>
+  <script src="lib/backbone.js"></script>
+
+
   <script src="../app/models/EditModel.js"></script>
   <script src="../app/views/EditView.js"></script>
   <script src="../db/db.js"></script>
+  
+
   <script>
   $(document).ready(function(){
     $('.edit').on('click', function(){
