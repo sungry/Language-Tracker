@@ -17,7 +17,8 @@ var EditView = Backbone.View.extend({
     $('textarea').val('');
     // Only save data if text was entered
     if (input.length) {
-      db[type].push(input);
+      var typeRef = db.child(type);
+      typeRef.push(input);
     }
   },
 
