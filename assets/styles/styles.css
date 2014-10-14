@@ -8,7 +8,7 @@ body {
 }
 
 .content {
-  width: 650px;
+  width: 700px;
   margin: auto;
 }
 
@@ -18,4 +18,8 @@ textarea {
 
 li {
   font-size: 16px;
+}
+
+.well {
+  border-radius: 8px;
 }
