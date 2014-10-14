@@ -46,11 +46,11 @@
   <script type="text/template" id="edit">
     <h4>Select note type: </h4>
     <select class="noteType">
-      <option value="question">Question</option>
-      <option value="sentence">Sentence</option>
-      <option value="grammar">Grammar</option>
-      <option value="research">Research</option>
-      <option value="note">Note</option>
+      <option value="Question">Question</option>
+      <option value="Sentence">Sentence</option>
+      <option value="Grammar">Grammar</option>
+      <option value="Research">Research</option>
+      <option value="Note">Note</option>
     </select>
 
     <h4>Enter text: </h4>
@@ -98,7 +98,7 @@
     });
 
     $('.view').on('click', function(){
-      new ViewView();
+      new ViewView({collection: notesList});
     });
 
     // Toggle 'selected' look for nav buttons

@@ -21,10 +21,6 @@ var EditView = Backbone.View.extend({
     if (input.length) {
       this.collection.add({type: type, body: input});
       console.log(this.collection, 'thiscollection');
-      // var model = this.collection.create({type: type, body: input});
-      // console.log(this.collection.get(model.id), 'id');
-      // var typeRef = db.child(type);
-      // typeRef.push(input);
     }
   },
 
