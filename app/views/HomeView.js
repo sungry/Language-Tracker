@@ -7,7 +7,7 @@ var HomeView = Backbone.View.extend({
   },
 
   render: function(){
-    var $welcome = $('<h1>Welcome to Language Tracker!</h1>')
+    var $welcome = $('<h1>Welcome!</h1>')
     this.$el.append($welcome);
   }
 });
