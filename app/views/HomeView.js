@@ -7,7 +7,7 @@ var HomeView = Backbone.View.extend({
   },
 
   render: function(){
-    var $welcome = $('<h1>Welcome!</h1>')
+    var $welcome = $('<h1>Welcome!</h1><p>Click Edit to save notes and View to see them.</p>');
     this.$el.append($welcome);
   }
 });

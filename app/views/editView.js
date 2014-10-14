@@ -2,6 +2,8 @@ var EditView = Backbone.View.extend({
 
   el: $('.content'),
 
+
+
   initialize: function() {
     this.render();
   },
@@ -17,8 +19,12 @@ var EditView = Backbone.View.extend({
     $('textarea').val('');
     // Only save data if text was entered
     if (input.length) {
-      var typeRef = db.child(type);
-      typeRef.push(input);
+      this.collection.add({type: type, body: input});
+      console.log(this.collection, 'thiscollection');
+      // var model = this.collection.create({type: type, body: input});
+      // console.log(this.collection.get(model.id), 'id');
+      // var typeRef = db.child(type);
+      // typeRef.push(input);
     }
   },
 
