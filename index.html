@@ -12,12 +12,7 @@
     <div class="container">
       <!-- Nav Bar -->
       <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
+        <img src="assets/ChineseChar.jpg">
         <a class="navbar-brand" href="#">Language Tracker</a>
       </div>
       <div class="collapse navbar-collapse">
@@ -45,7 +40,8 @@
   <!-- TO DO: Move to template file -->
   <script type="text/template" id="edit">
     <div class="well">
-      <h2>Select note type: </h2>
+      <h1>Progress for <%= date%></h1>
+      <h3>Select note type: </h3>
       <select class="noteType">
         <option value="Question">Question</option>
         <option value="Sentence">Sentence</option>
@@ -54,18 +50,26 @@
         <option value="Note">Note</option>
       </select>
 
-      <h2>Enter text: </h2>
+      <h3>Enter text: </h3>
       <textarea rows="10" cols="50" placeholder="早報就喺嗰張枱下面"></textarea>
       <br>
       <br>
-      <button>Save</button>
+      <button class="save">Save</button>
+      <br>
+      <br>
+      <h3>What I focused on today:</h3>
+      <input type="radio" value="Reading"> Reading<br>
+      <input type="radio" value="Writing"> Writing<br>
+      <input type="radio" value="Listening"> Listening<br>
+      <input type="radio" value="Speaking"> Speaking<br>
+      <br>
+      <button class="submit">Submit</button>
     </div>
   </script>
 
   <script src="assets/lib/jquery-1.11.1.js"></script>
   <script src="assets/lib/underscore.js"></script>
   <script src="assets/lib/backbone.js"></script>
-  <!-- // <script src="https://backbonejs.org/backbone-min.js"></script> -->
   <script src='https://cdn.firebase.com/js/client/1.1.1/firebase.js'></script>
   <script src="https://cdn.firebase.com/libs/backfire/0.3.0/backfire.min.js"></script>
 
@@ -86,6 +90,12 @@
     var notesList = new NotesCollection();
 
     $('.home').on('click', function(){
+      new HomeView();
+    });
+
+    $('.navbar-brand').on('click', function(){
+      $('ul li').removeClass('active');
+      $('.home').addClass('active');
       new HomeView();
     });
 
