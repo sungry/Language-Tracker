@@ -11,10 +11,9 @@ var HomeView = Backbone.View.extend({
         '<div class="well">' +
         '<h1>Welcome, Language Enthusiast!</h1>' +
         '<br>' +
-        '<h2>*Click Edit to save notes or View to see them*</h3>' +
-        '<br>' +
-        '<h4>Language Tracker allows you to document your progress ' +
-        'while learning a language and keep you motivated along the ' +
+        '<h4>Language Tracker allows you ' +
+        'to <em>document your progress</em> ' +
+        'while learning a language and <em>keep you motivated</em> along the ' +
         'way! This site is under construction,' +
         ' so stay tuned for additional features.</h4>' +
         '<br>' +

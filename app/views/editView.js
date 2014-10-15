@@ -7,7 +7,8 @@ var EditView = Backbone.View.extend({
   },
 
   events: {
-    'click button': 'save'
+    'click button.save': 'save',
+    'click button.submit': 'submit'
   },
 
   save: function(){
@@ -21,7 +22,11 @@ var EditView = Backbone.View.extend({
     }
   },
 
-  template: _.template( $("#edit").html(), {} ),
+  submit: function(){
+    console.log('submitting focus')
+  },
+
+  template: _.template( $("#edit").html(), {date: (new Date()).toDateString()} ),
 
   render: function() {
     this.$el.html(this.template);
