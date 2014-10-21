@@ -10,6 +10,9 @@ Language-Tracker offers a place to store information and document progress in la
   4. Add notes, questions, and topics to research
   5. Suggestions for fun, motivational activities
   6. Support for creating daily learning habits
+  7. Log how you felt about your study
+  8. Suggestions based on mood trend
+  9. Track four areas of study (reading, writing, listening, speaking)
 
 
 # Problem #
