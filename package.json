@@ -3,11 +3,22 @@
   "version": "0.0.1",
   "author": "Nicholas Litwin",
   "description": "Track your language progress",
-  "keywords": ["language", "languages", "foreign", "progress", "tracker", "diary", "todo", "to do"],
-  "scripts": {"start": "node server/server.js"},
+  "keywords": [
+    "language",
+    "languages",
+    "foreign",
+    "progress",
+    "tracker",
+    "diary",
+    "todo",
+    "to do"
+  ],
+  "scripts": {
+    "start": "node server/server.js"
+  },
   "private": true,
   "dependencies": {
+    "express": "^4.9.8"
   },
-  "devDependencies": {
-  }
+  "devDependencies": {}
 }
