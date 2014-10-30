@@ -1,5 +1,9 @@
 var express = require('express');
 var app = express();
+var path = require('path');
+
+// app.use(express.compress());
+app.use(express.static(path.join(__dirname, '../public'), {maxAge: '1d'}));
 
 app.get('/', function(req, res) {
   res.send("My first server with express!");
