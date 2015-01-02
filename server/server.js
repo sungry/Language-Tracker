@@ -2,6 +2,8 @@ var express = require('express');
 var app = express();
 var path = require('path');
 var logger = require('morgan');
+var favicon = require('serve-favicon');
+
 
 app.use(logger('dev'));
 
@@ -9,6 +11,7 @@ app.use(logger('dev'));
 // app.use(express.compress());
 
 app.use(express.static(path.join(__dirname, '../public'), {maxAge: '1d'}));
+app.use(favicon(path.join(__dirname, '../public/assets/images/favicon.ico')));
 
 // Enable Angular to get rid of /#/ in url paths
 app.all('/*', function(req, res) {
