@@ -3,13 +3,10 @@ body {
   padding-top: 50px;
 }
 
-.main {
-  margin-top: 50px;
-}
-
-.content {
+#content {
   width: 700px;
   margin: auto;
+  margin-top: 50px;
 }
 
 textarea {
