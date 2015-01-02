@@ -17,6 +17,10 @@
       .state('logout', {
         url: '/logout',
         templateUrl: 'app/login/logout.html'
+      })
+      .state('signup', {
+        url: '/signup',
+        templateUrl: 'app/login/signup.html'
       });
 
     $urlRouterProvider.otherwise('/');
