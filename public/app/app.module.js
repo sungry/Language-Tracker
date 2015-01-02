@@ -13,6 +13,10 @@
         url: '/',
         templateUrl: '/app/home/home.html',
         controller: 'HomeController'
+      })
+      .state('logout', {
+        url: '/logout',
+        templateUrl: 'app/login/logout.html'
       });
 
     $urlRouterProvider.otherwise('/');
