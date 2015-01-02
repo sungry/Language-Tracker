@@ -1,16 +1,16 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" ng-app="app">
 <head>
+  <base href="/">
 	<meta charset="utf-8">
-	<title></title>
-	<meta name="description" content="">
+	<title>Language Tracker</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/styles/styles.css">
 </head>
 <body>
+  <!-- Nav Bar 
   <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container">
-      <!-- Nav Bar -->
       <div class="navbar-header">
         <img src="assets/images/logo-navbar.jpg">
         <a class="navbar-brand" href="#">Language Tracker</a>
@@ -26,21 +26,19 @@
           <li><a href="#signup" class="signup">Signup</a></li>
           <li class="logout"><a href="#logout">Logout</a></li>
         </ul>
-      </div><!--/.nav-collapse -->
+      </div>
     </div>
-  </div>
+  </div> Nav Bar End -->
 
-  <!-- Main Content Area -->
-  <div class="main">
-    <div class="content">
-      
-    </div>
-  </div>
 
-  <!-- TO DO: Move to template file -->
+  <!-- New Angular code -->
+  <p>test</p>
+  <div ui-view></div>
+
+  <!-- TO DO: Move to template file 
   <script type="text/template" id="edit">
     <div class="well">
-      <h1>Progress for <%= date%></h1>
+      <h1>Progress</h1>
       <h3>Select note type: </h3>
       <select class="noteType">
         <option value="Question">Question</option>
@@ -66,26 +64,15 @@
       <button class="submit">Submit</button>
     </div>
   </script>
-
-  <script src="bower_components/jquery/dist/jquery.min.js"></script>
-  <script src="bower_components/underscore/underscore-min.js"></script>
-  <script src="bower_components/backbone/backbone.js"></script>
-  <script src='https://cdn.firebase.com/js/client/1.1.1/firebase.js'></script>
-  <script src="https://cdn.firebase.com/libs/backfire/0.3.0/backfire.min.js"></script>
-
-  <script src="app/views/HomeView.js"></script>
-  <script src="app/views/SignupView.js"></script>
-  <script src="app/views/LogoutView.js"></script>
-  <script src="app/models/NotesModel.js"></script>
-  <script src="app/collections/NotesCollection.js"></script>
-  <script src="app/views/NotesModelView.js"></script>
-  <script src="app/views/NotesCollectionView.js"></script>
-  <script src="app/views/EditView.js"></script>
-  <script src="app/views/ViewView.js"></script>
-  
+-->
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+  <script src="app/app.module.js"></script>
+  <script src="app/home/home.controller.js"></script>
 
   <script>
-  $(document).ready(function(){
+  //$(document).ready(function(){
+    /*
     new HomeView();
     var notesList = new NotesCollection();
 
@@ -129,7 +116,8 @@
     $('.content').on('blur', 'textarea', function(){
       $(this).attr('placeholder', '早報就喺嗰張枱下面');
     });
-  });
+    */
+  // });
   </script>
 
 </body>
