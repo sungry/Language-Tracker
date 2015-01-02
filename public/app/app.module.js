@@ -21,6 +21,14 @@
       .state('signup', {
         url: '/signup',
         templateUrl: 'app/login/signup.html'
+      })
+      .state('edit', {
+        url: '/edit',
+        templateUrl: 'app/edit/edit.html'
+      })
+      .state('view', {
+        url: '/view',
+        templateUrl: 'app/view/view.html'
       });
 
     $urlRouterProvider.otherwise('/');

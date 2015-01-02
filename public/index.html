@@ -34,36 +34,6 @@
   <!-- Angular Views -->
   <div ui-view id="content"></div>
 
-  <!-- TO DO: Move to template file 
-  <script type="text/template" id="edit">
-    <div class="well">
-      <h1>Progress</h1>
-      <h3>Select note type: </h3>
-      <select class="noteType">
-        <option value="Question">Question</option>
-        <option value="Sentence">Sentence</option>
-        <option value="Grammar">Grammar</option>
-        <option value="Research">Research</option>
-        <option value="Note">Note</option>
-      </select>
-
-      <h3>Enter text: </h3>
-      <textarea rows="10" cols="50" placeholder="早報就喺嗰張枱下面"></textarea>
-      <br>
-      <br>
-      <button class="save">Save</button>
-      <br>
-      <br>
-      <h3>What I focused on today:</h3>
-      <input type="radio" value="Reading"> Reading<br>
-      <input type="radio" value="Writing"> Writing<br>
-      <input type="radio" value="Listening"> Listening<br>
-      <input type="radio" value="Speaking"> Speaking<br>
-      <br>
-      <button class="submit">Submit</button>
-    </div>
-  </script>
--->
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
   <script src="app/app.module.js"></script>
@@ -72,7 +42,6 @@
   <script>
   //$(document).ready(function(){
     /*
-    new HomeView();
     var notesList = new NotesCollection();
 
     $('.home').on('click', function(){
@@ -83,18 +52,6 @@
       $('ul li').removeClass('active');
       $('.home').addClass('active');
       new HomeView();
-    });
-
-    $('.logout').on('click', function(){
-      new LogoutView();
-    });
-
-    $('.signup').on('click', function(){
-      new SignupView();
-    });
-
-    $('.edit').on('click', function(){
-      new EditView({collection: notesList});
     });
 
     $('.view').on('click', function(){
