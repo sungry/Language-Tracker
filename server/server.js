@@ -10,6 +10,7 @@ app.use(logger('dev'));
 // TO DO: compress static files
 // app.use(express.compress());
 
+// Serve static files and favicon
 app.use(express.static(path.join(__dirname, '../public'), {maxAge: '1d'}));
 app.use(favicon(path.join(__dirname, '../public/assets/images/favicon.ico')));
 
