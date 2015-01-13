@@ -6,8 +6,8 @@
   ])
 
   .config(function($stateProvider, $urlRouterProvider, $locationProvider){
-    $locationProvider.html5Mode(true);
     
+    // Set up routes
     $stateProvider
       .state('home', {
         url: '/',
@@ -20,7 +20,8 @@
       })
       .state('signup', {
         url: '/signup',
-        templateUrl: 'app/login/signup.html'
+        templateUrl: 'app/login/signup.html',
+        controller: 'SignupController'
       })
       .state('edit', {
         url: '/edit',
@@ -32,6 +33,9 @@
       });
 
     $urlRouterProvider.otherwise('/');
+
+    // Use the HTML5 History API, removing /#/
+    $locationProvider.html5Mode(true);
   });
 
 })();
