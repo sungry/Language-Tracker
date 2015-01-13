@@ -1,9 +1,9 @@
 Language-Tracker
 ================
 
-Language-Tracker offers a place to store information and document progress in language learning in order to stay motivated and learn daily.
+Language-Tracker offers a place to store information and document progress in language learning in order to stay motivated and learn daily. **This repository is in progress. Currently converting Backbone/jQuery to Angular. Stay tuned!**
 
-# Features #
+# Future Features #
   1. Document progress
   2. View progress over time
   3. Set reminders
@@ -15,8 +15,6 @@ Language-Tracker offers a place to store information and document progress in la
   9. Track four areas of study (reading, writing, listening, speaking)
 
 
-# Problem #
+# Why Language Tracker? #
   The two biggest factors in determining success in foreign language learning are motivation and daily learning. Language Tracker helps you keep track of all your learning and supplies you with motivational tips to keep learning.
-
-# How to Get Started #
-  Simply create an account at languagetracker.azurewebsites.net to get started immediately!
+  
