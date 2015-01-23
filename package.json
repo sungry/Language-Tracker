@@ -13,6 +13,10 @@
     "todo",
     "to do"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/polynickglot/Language-Tracker"
+  },
   "scripts": {
     "start": "node server/server.js"
   },
