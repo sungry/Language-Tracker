@@ -3,9 +3,13 @@ var app = express();
 var path = require('path');
 var logger = require('morgan');
 var favicon = require('serve-favicon');
-
+var mongo = require('mongodb').MongoClient;
 
 app.use(logger('dev'));
+
+mongo.connect('mongodb://localhost:27017/language-tracker', function(err, db) {
+  if (err) throw err;
+});
 
 // TO DO: compress static files
 // app.use(express.compress());
