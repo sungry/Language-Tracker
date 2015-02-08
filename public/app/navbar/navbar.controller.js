@@ -2,14 +2,12 @@
   "use strict";
 
   angular.module('app')
-
   .controller('NavController', NavController);
 
-  NavController.$inject = ['$scope'];
+  NavController.$inject = ['$scope', 'authToken'];
 
-  function NavController ($scope) {
-    // remove scope parameter
-    console.log('NavController initialized.');
+  function NavController ($scope, authToken) {
+    $scope.isAuthenticated = authToken.isAuthenticated;
   }
   
 })();
