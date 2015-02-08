@@ -1,5 +1,6 @@
 {
   "name": "Language-Tracker",
+  "main": "server/server.js",
   "version": "0.0.1",
   "author": "Nicholas Litwin",
   "description": "Track your language progress",
@@ -11,7 +12,9 @@
     "tracker",
     "diary",
     "todo",
-    "to do"
+    "to do",
+    "study",
+    "organize"
   ],
   "repository": {
     "type": "git",
@@ -21,8 +24,12 @@
     "start": "nodemon server/server.js"
   },
   "dependencies": {
+    "bcrypt": "^0.8.1",
+    "body-parser": "^1.10.2",
     "express": "^4.9.8",
+    "jwt-simple": "^0.2.0",
     "mongodb": "^1.4.29",
+    "mongoose": "^3.8.22",
     "serve-favicon": "^2.2.0"
   },
   "devDependencies": {
