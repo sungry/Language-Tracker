@@ -11,4 +11,5 @@
     // remove scope parameter
     console.log('NavController initialized.');
   }
+  
 })();

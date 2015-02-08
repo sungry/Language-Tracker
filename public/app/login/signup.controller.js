@@ -5,20 +5,22 @@
 
   .controller('SignupController', SignupController);
 
-  SignupController.$inject = ['$scope', '$timeout'];
+  SignupController.$inject = ['$scope', 'SignupService'];
 
-  function SignupController ($scope, $timeout) {
+  function SignupController ($scope, SignupService) {
     console.log('SignupController initialized.');
 
     $scope.userInfo = {
-      username: 'default',
+      username: '',
       email: '',
       password: ''
     };
-    $timeout(function(){
-      // console.log(" changed? ", $scope.signupForm.name.$pristine);
+
+    $scope.submitForm = function(){
+      SignupService.submitNewUser($scope.userInfo);
       
-    }, 5000);
+    };
+
   }
 
 })();
