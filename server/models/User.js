@@ -15,12 +15,24 @@ var UserSchema = new mongoose.Schema({
   password: {
     type: String, 
     required: true
-  }
+  },
+  created_at: Date,
+  updated_at: Date
 });
 
 UserSchema.pre('save', function(next) {
   var user = this;
 
+  // Update created_at and updated_at
+  var currentDate = new Date();
+
+  user.updated_at = currentDate;
+
+  if (!user.created_at) {
+    user.created_at = currentDate;
+  }
+
+  // Salt and hash password
   if (!user.isModified('password')) return next();
 
   bcrypt.genSalt(10, function(err, salt) {
