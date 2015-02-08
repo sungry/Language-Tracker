@@ -3,6 +3,11 @@ body {
   padding-top: 50px;
 }
 
+/* Doesn't change color... :(*/
+.navbar-brand {
+  color: #fff;
+}
+
 #content {
   width: 700px;
   margin: auto;
@@ -28,3 +33,9 @@ img {
   margin-right: 5px;
   border-radius: 20px;
 }
+
+/* Signup form */
+label {
+  width: 80px;
+}
+
