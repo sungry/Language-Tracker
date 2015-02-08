@@ -23,13 +23,13 @@
         templateUrl: 'app/login/signup.html',
         controller: 'SignupController'
       })
-      .state('edit', {
-        url: '/edit',
-        templateUrl: 'app/edit/edit.html'
+      .state('add', {
+        url: '/add',
+        templateUrl: 'app/add/add.html'
       })
-      .state('view', {
-        url: '/view',
-        templateUrl: 'app/view/view.html'
+      .state('notes', {
+        url: '/notes',
+        templateUrl: 'app/notes/notes.html'
       });
 
     $urlRouterProvider.otherwise('/');
