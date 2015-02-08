@@ -1,13 +1,14 @@
 (function(){
   "use strict";
 
-  angular.module('app')
-  .controller('NavController', NavController);
+  angular
+    .module('app')
+    .controller('NavCtrl', NavCtrl);
 
-  NavController.$inject = ['$scope', 'authToken'];
+  NavCtrl.$inject = ['$scope', 'AuthToken'];
 
-  function NavController ($scope, authToken) {
-    $scope.isAuthenticated = authToken.isAuthenticated;
+  function NavCtrl ($scope, AuthToken) {
+    $scope.isAuthenticated = AuthToken.isAuthenticated;
   }
   
 })();

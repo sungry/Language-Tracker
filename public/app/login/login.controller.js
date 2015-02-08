@@ -3,16 +3,15 @@
 
   angular
     .module('app')
-    .controller('SignupCtrl', SignupCtrl);
+    .controller('LoginCtrl', LoginCtrl);
 
-  SignupCtrl.$inject = ['$scope', 'Auth'];
+  LoginCtrl.$inject = ['$scope', 'Auth'];
 
-  function SignupCtrl ($scope, Auth) {
-
+  function LoginCtrl ($scope, Auth) {
     $scope.submitForm = function(){
-      Auth.signup($scope.userInfo)
+      Auth.login($scope.userInfo)
         .success(function(res) {
-          console.log('New account created.');
+          console.log('Welcome back!');
         })
         .error(function(err) {
           console.log('Could not create account.');
