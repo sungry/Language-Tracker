@@ -1,4 +1,4 @@
-Language-Tracker
+Language Tracker
 ================
 
 Language-Tracker offers a place to store information and document progress in language learning in order to stay motivated and learn daily. **This repository is in progress. Currently converting Backbone/jQuery to Angular. Stay tuned!**
