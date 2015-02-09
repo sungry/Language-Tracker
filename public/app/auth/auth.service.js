@@ -10,11 +10,11 @@
   function Auth ($http, AuthToken, $state, API_URL) {
 
     this.login = function (userInfo) {
-      return $http.post(API_URL + '/api/login', userInfo).success(authSuccessful);
+      return $http.post(API_URL + '/login', userInfo).success(authSuccessful);
     };
 
     this.signup = function (userInfo) {
-      return $http.post(API_URL + '/api/signup', userInfo).success(authSuccessful);
+      return $http.post(API_URL + '/signup', userInfo).success(authSuccessful);
     };
 
     function authSuccessful (res) {
