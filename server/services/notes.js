@@ -19,5 +19,6 @@ exports.getNotes = function(req, res) {
 var notes = [
   {type: 'Question', body: 'What\'s the difference between this and that?'}, 
   {type: 'Grammar', body: 'Ich habe, du habst'}, 
-  {type: 'Sentence', body: 'Potrei imparare le lingue ogni giorno.'}
+  {type: 'Sentence', body: 'Potrei imparare le lingue ogni giorno.'},
+  {type: 'Research', body: 'Is the 7th tone in Cantonese still spoken?'}
 ];
