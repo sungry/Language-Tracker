@@ -14,11 +14,11 @@
     <div class="navbar-collapse" ng-class="{collapse: isCollapsed}">
       <ul class="nav navbar-nav">
         <li ui-sref-active="active"><a ui-sref="home">Home</a></li>
-        <li ui-sref-active="active"><a ui-sref="notes">Notes</a></li>
-        <li ui-sref-active="active"><a ui-sref="add">Add</a></li>
+        <li ui-sref-active="active" ng-show="isAuthenticated()"><a ui-sref="notes">Notes</a></li>
+        <li ui-sref-active="active" ng-show="isAuthenticated()"><a ui-sref="add">Add</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a>Daily Streak: <span class="badge">14</span></a></li>
+        <!-- <li ng-show="isAuthenticated()"><a>Daily Streak: <span class="badge">14</span></a></li> -->
         <li ng-hide="isAuthenticated()"><a ui-sref-active="active" ui-sref="signup">Signup</a></li>
         <li ng-hide="isAuthenticated()"><a ui-sref-active="active" ui-sref="login">Login</a></li>
         <li ng-show="isAuthenticated()"><a ui-sref-active="active" ui-sref="logout">Logout</a></li>
