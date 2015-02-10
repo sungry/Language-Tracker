@@ -1,11 +1,11 @@
+// Setup
 var express    = require('express');
 var app        = express();
-
 var path       = require('path');
 var logger     = require('morgan');
 var favicon    = require('serve-favicon');
 var bodyParser = require('body-parser'); 
-
+// Services
 var mongoose   = require('mongoose');
 var jwt        = require('jwt-simple');
 var config     = require('./services/config');
@@ -35,7 +35,10 @@ app.all('/*', function(req, res) {
 });
 
 // Connect to mongoDB database hosted on MongoLabs
-mongoose.connect('mongodb://langtrack:langtrack@ds045679.mongolab.com:45679/language-tracker');
+mongoose.connect(config.db);
+mongoose.connection.on('open', function(){
+  console.log('Connected to MongoDB');
+});
 
 var server = app.listen(3141, function(){
   var port = server.address().port;
