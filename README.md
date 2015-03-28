@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/polynickglot/language-tracker.png?label=ready&title=Ready)](https://waffle.io/polynickglot/language-tracker)
 Language Tracker
 ================
 
