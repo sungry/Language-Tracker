@@ -1,0 +1,13 @@
+form(name="login_form", no-validate, ng-submit="submitForm()")
+  fieldset
+    legend Login
+
+    label Username
+
+    input(type="text", name="name", ng-model="userInfo.username", placeholder="Username" required, ng-minlength=4, ng-maxlength=20)
+    br
+
+    label Password
+
+    input(type="text", name="password", ng-model="userInfo.password", placeholder="Password", required, ng-minlength=6, ng-maxlength=25)
+    button(type="submit") Login

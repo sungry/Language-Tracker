@@ -1,0 +1,15 @@
+form(name="signup_form", no-validate, ng-submit="submitForm()")
+  fieldset
+    legend Signup
+
+    label Username
+    input(type="text", name="name", ng-model="userInfo.username", placeholder="Username", required, ng-minlength=4, ng-maxlength=20)
+    br
+
+    label Email
+    input(type="text", name="email", ng-model="userInfo.email", placeholder="Email", required)
+    br
+
+    label Password
+    input(type="text", name="password", ng-model="userInfo.password", placeholder="Password", required, ng-minlength=6, ng-maxlength=25)
+    button(type="submit") Submit

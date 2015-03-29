@@ -4,7 +4,7 @@ var app        = express();
 var path       = require('path');
 var logger     = require('morgan');
 var favicon    = require('serve-favicon');
-var bodyParser = require('body-parser'); 
+var bodyParser = require('body-parser');
 // Services
 var mongoose   = require('mongoose');
 var jwt        = require('jwt-simple');
@@ -21,8 +21,8 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
 // Serve static files and favicon
-app.use(express.static(path.join(__dirname, '../public'), {maxAge: '1d'}));
-app.use(favicon(path.join(__dirname, '../public/assets/images/favicon.ico')));
+app.use(express.static(path.join(__dirname, '../dist'), {maxAge: '1d'}));
+app.use(favicon(path.join(__dirname, '../dist/assets/images/favicon.ico')));
 
 app.post('/signup', userRoutes.signup);
 app.post('/login', userRoutes.login);
@@ -31,7 +31,7 @@ app.get('/notes', notes.getNotes);
 
 // Enable Angular to get rid of /#/ in url paths
 app.all('/*', function(req, res) {
-  res.sendFile(path.join(__dirname, '../public/index.html'));
+  res.sendFile(path.join(__dirname, '../dist/index.html'));
 });
 
 // Connect to mongoDB database hosted on MongoLabs

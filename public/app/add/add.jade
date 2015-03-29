@@ -1,0 +1,31 @@
+.well
+  h1 Progress
+
+  h3 Select note type:
+
+  select(class="noteType")
+    option(value="Question") Question
+    option(value="Sentence") Sentence
+    option(value="Grammar") Grammar
+    option(value="Research") Research
+    option(value="Note") Note
+
+  h3 Enter text:
+
+  textarea(rows="10", cols="50", placeholder="早報就喺嗰張枱下面")
+  br
+  br
+
+  button(class="save") Save
+  br
+  br
+
+  h3 What I focused on today:
+
+  input(type="radio", value="Reading")
+  input(type="radio", value="Writing")
+  input(type="radio", value="Listening")
+  input(type="radio", value="Speaking")
+  br
+
+  button(class="submit") Submit

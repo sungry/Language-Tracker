@@ -1,0 +1,42 @@
+- var jsFiles = [];
+- jsFiles.push('lib/angular/angular')
+- jsFiles.push('lib/angular-ui-router/release/angular-ui-router')
+- jsFiles.push('app/app.config')
+- jsFiles.push('app/auth/authInterceptor.service')
+- jsFiles.push('app/auth/authToken.service')
+- jsFiles.push('app/auth/auth.service')
+- jsFiles.push('app/navbar/navbar.controller')
+- jsFiles.push('app/home/home.controller')
+- jsFiles.push('app/notes/notes.controller')
+- jsFiles.push('app/login/signup.controller')
+- jsFiles.push('app/login/login.controller')
+- jsFiles.push('app/login/logout.controller')
+
+doctype html
+
+html(lang="en", ng-app="app")
+
+head
+  base(href="/")
+
+  meta(charset="utf-8")
+
+  meta(name="viewport", content="width=device-width, initial-scale=1")
+
+  title Language Tracker
+
+  link(rel="stylesheet", href="assets/styles/bootstrap.css")
+
+  link(rel="stylesheet", href="assets/styles/styles.css")
+
+body
+  div(ng-include="'app/navbar/navbar.html'")
+
+  div(ui-view, id="content")
+
+  each jsFile in jsFiles
+    script(src="#{jsFile}.js", type="text/javascript")
+
+
+
+

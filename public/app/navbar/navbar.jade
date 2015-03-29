@@ -1,0 +1,29 @@
+div(ng-controller="NavCtrl", class="navbar navbar-default navbar-fixed-top", role="navigation")
+  .container-fluid
+    .navbar-header
+      img(src="assets/images/logo-navbar.jpg")
+
+      button(type="button", class="navbar-toggle", ng-init="isCollapsed = true", ng-click="isCollapsed = !isCollapsed")
+        span(class="icon-bar")
+
+        span(class="icon-bar")
+
+        span(class="icon-bar")
+
+      a(class="navbar-brand" ui-sref="home") Language Tracker
+
+    div(class="navbar-collapse", ng-class="{collapse: isCollapsed}")
+      ul(class="nav navbar-nav")
+        li(ui-sref-active="active") #[a(ui-sref="home") Home]
+
+        li(ui-sref-active="active", ng-show="isAuthenticated()") #[a(ui-sref="notes") Notes]
+
+        li(ui-sref-active="active", ng-show="isAuthenticated()") #[a(ui-sref="add") Add]
+
+      ul(class="nav navbar-nav navbar-right")
+        //- li(ng-show="isAuthenticated()") #[a Daily Streak: #[span(class="badge") 14]]
+        li(ng-hide="isAuthenticated()") #[a(ui-sref-active="active", ui-sref="signup") Signup]
+
+        li(ng-hide="isAuthenticated()") #[a(ui-sref-active="active", ui-sref="login") Login]
+
+        li(ng-show="isAuthenticated()") #[a(ui-sref-active="active", ui-sref="logout") Logout]

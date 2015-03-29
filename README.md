@@ -17,4 +17,3 @@ Language-Tracker offers a place to store information and document progress in la
 
 # Why Language Tracker? #
   The two biggest factors in determining success in foreign language learning are motivation and daily learning. Language Tracker helps you keep track of all your learning and supplies you with motivational tips to keep learning.
-  
