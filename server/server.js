@@ -29,8 +29,7 @@ app.post('/login', userRoutes.login);
 
 app.get('/notes', notes.getNotes);
 
-// Enable Angular to get rid of /#/ in url paths
-app.all('/*', function(req, res) {
+app.all('*', function(req, res) {
   res.sendFile(path.join(__dirname, '../dist/index.html'));
 });
 
