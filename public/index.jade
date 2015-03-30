@@ -1,16 +1,16 @@
 - var jsFiles = [];
 - jsFiles.push('lib/angular/angular')
 - jsFiles.push('lib/angular-ui-router/release/angular-ui-router')
-- jsFiles.push('app/app.config')
-- jsFiles.push('app/auth/authInterceptor.service')
-- jsFiles.push('app/auth/authToken.service')
-- jsFiles.push('app/auth/auth.service')
-- jsFiles.push('app/navbar/navbar.controller')
-- jsFiles.push('app/home/home.controller')
-- jsFiles.push('app/notes/notes.controller')
-- jsFiles.push('app/login/signup.controller')
-- jsFiles.push('app/login/login.controller')
-- jsFiles.push('app/login/logout.controller')
+- jsFiles.push('app/app')
+- jsFiles.push('app/components/auth/authInterceptor.service')
+- jsFiles.push('app/components/auth/authToken.service')
+- jsFiles.push('app/components/auth/auth.service')
+- jsFiles.push('app/components/navbar/navbar.controller')
+- jsFiles.push('app/components/home/home.controller')
+- jsFiles.push('app/components/notes/notes.controller')
+- jsFiles.push('app/components/login/signup.controller')
+- jsFiles.push('app/components/login/login.controller')
+- jsFiles.push('app/components/login/logout.controller')
 
 doctype html
 
@@ -30,7 +30,7 @@ head
   link(rel="stylesheet", href="assets/styles/styles.css")
 
 body
-  div(ng-include="'app/navbar/navbar.html'")
+  div(ng-include="'app/components/navbar/navbar.html'")
 
   div(ui-view, id="content")
 
