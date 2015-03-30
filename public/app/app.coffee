@@ -2,30 +2,30 @@
 
 app = angular.module 'app', ['ui.router']
 
-config = ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) ->
+config = ($stateProvider, $urlRouterProvider, $httpProvider) ->
 
   states =
     home:
       url        : '/'
-      templateUrl: '/app/home/home.html'
+      templateUrl: '/app/components/home/home.html'
       controller :  'HomeCtrl'
     logout:
-      url       : '/logout'
-      controller: 'LogoutCtrl'
+      url        : '/logout'
+      controller : 'LogoutCtrl'
     signup:
       url        : '/signup'
-      templateUrl: 'app/login/signup.html'
+      templateUrl: 'app/components/login/signup.html'
       controller : 'SignupCtrl'
     login:
       url        : '/login'
-      templateUrl: 'app/login/login.html'
+      templateUrl: 'app/components/login/login.html'
       controller : 'LoginCtrl'
     add:
       url        : '/add'
-      templateUrl: 'app/add/add.html'
+      templateUrl: 'app/components/add/add.html'
     notes:
       url        : '/notes'
-      templateUrl: 'app/notes/notes.html'
+      templateUrl: 'app/components/notes/notes.html'
       controller : 'NotesCtrl'
 
   for name, state of states
@@ -35,14 +35,11 @@ config = ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) 
 
   $httpProvider.interceptors.push 'AuthInterceptor'
 
-  # Use the HTML5 History API, removing /#/
-  $locationProvider.html5Mode true
   return
 
 app.config [
   '$stateProvider'
   '$urlRouterProvider'
-  '$locationProvider'
   '$httpProvider'
   config
 ]

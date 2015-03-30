@@ -1,0 +1,8 @@
+h1 My Notes
+
+div(ng-repeat="note in notes", class="panel panel-info")
+  .panel-heading
+    h3(class="panel-title") {{note.type}}
+  .panel-body
+    p {{note.body}}
+    br
