@@ -1,6 +1,18 @@
 module.exports = (grunt) ->
+  require('load-grunt-tasks') grunt
+
+  require('time-grunt') grunt
 
   grunt.initConfig
+
+    watch:
+      jade:
+        files: ['public/app/**/*.jade', 'public/index.jade']
+        tasks: ['newer:jade:compile']
+      coffee:
+        files: ['public/app/**/*.coffee']
+        tasks: ['newer:coffee:dist']
+
     clean:
       dist: 'dist'
 
@@ -41,14 +53,10 @@ module.exports = (grunt) ->
           ext: '.html'
         ]
 
-  grunt.loadNpmTasks 'grunt-contrib-clean'
-  grunt.loadNpmTasks 'grunt-contrib-copy'
-  grunt.loadNpmTasks 'grunt-contrib-coffee'
-  grunt.loadNpmTasks 'grunt-contrib-jade'
-
   grunt.registerTask 'default', [
     'clean'
     'copy'
     'coffee'
     'jade:compile'
+    'watch'
   ]
