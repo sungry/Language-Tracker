@@ -47,5 +47,5 @@ function createSendToken(user, res) {
   return res.status(200).send({
     user: user.toJSON(),
     token: token
-  });  
+  });
 }
