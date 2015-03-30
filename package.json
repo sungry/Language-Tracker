@@ -5,9 +5,16 @@
   "author": "Nicholas Litwin",
   "description": "Track your language progress",
   "keywords": [
-    "language", "languages","foreign",
-    "progress", "tracker", "diary",
-    "todo", "to do", "study", "organize"
+    "language",
+    "languages",
+    "foreign",
+    "progress",
+    "tracker",
+    "diary",
+    "todo",
+    "to do",
+    "study",
+    "organize"
   ],
   "repository": {
     "type": "git",
@@ -32,6 +39,10 @@
     "grunt-contrib-coffee": "^0.13.0",
     "grunt-contrib-copy": "^0.8.0",
     "grunt-contrib-jade": "^0.14.1",
-    "morgan": "^1.4.1"
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-newer": "^1.1.0",
+    "load-grunt-tasks": "^3.1.0",
+    "morgan": "^1.4.1",
+    "time-grunt": "^1.1.0"
   }
 }
